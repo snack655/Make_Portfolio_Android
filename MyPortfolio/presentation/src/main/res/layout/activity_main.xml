@@ -92,7 +92,7 @@
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="47dp"
                         android:background="@drawable/edittext_main"
                         android:layout_marginRight="15dp"
                         android:layout_marginLeft="15dp"
@@ -115,7 +115,7 @@
                         android:layout_width="0dp"
                         android:layout_height="180dp"
                         android:layout_weight="1"
-                        app:cardElevation="10dp"
+                        app:cardElevation="3dp"
                         android:layout_margin="15dp"
                         app:cardCornerRadius="15dp"
                         android:backgroundTint="@color/white">
@@ -142,7 +142,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="세상은 넓지만\n이런 인제는 없다"
+                                android:text="세상은 넓지만\n이런 인재는 없다"
                                 android:layout_marginLeft="20dp"
                                 android:layout_marginTop="5dp"
                                 android:textColor="@color/black"
@@ -157,7 +157,7 @@
                         android:layout_height="180dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="15dp"
-                        app:cardElevation="10dp"
+                        app:cardElevation="3dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="15dp"
                         android:layout_marginBottom="15dp"
@@ -193,16 +193,180 @@
                                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="15dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="3dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1">
 
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_tech2"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="기술"
+                                android:layout_marginTop="10dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/hanna"
+                                android:textSize="17sp"
+                                android:layout_gravity="center_horizontal" />
+
+                        </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_marginRight="10dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="3dp"
+                        android:layout_weight="1">
 
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/ic_call"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="연락하기"
+                                android:layout_marginTop="10dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/hanna"
+                                android:textSize="17sp"
+                                android:layout_gravity="center_horizontal" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        app:cardElevation="3dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_house"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="운영"
+                                android:layout_marginTop="10dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/hanna"
+                                android:textSize="17sp"
+                                android:layout_gravity="center_horizontal" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="horizontal" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:text="오늘의 독서"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="전체 보기 >"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="38dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        tools:listitem="@layout/item_main_book"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_book"
+                        app:layout_constraintStart_toEndOf="@+id/textView4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#BFBFBF"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="최고의 인재 최민재입니다!"
+                    android:textSize="10dp"
+                    android:layout_margin="10dp"/>
 
             </LinearLayout>
         </ScrollView>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

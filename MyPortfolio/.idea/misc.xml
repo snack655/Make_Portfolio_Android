@@ -8,6 +8,8 @@
         <entry key="presentation/src/main/res/drawable/frame_layout.xml" value="0.26851851851851855" />
         <entry key="presentation/src/main/res/font/hanna11.xml" value="0.17708333333333334" />
         <entry key="presentation/src/main/res/layout/activity_main.xml" value="0.2683452901976556" />
+        <entry key="presentation/src/main/res/layout/item_banner.xml" value="0.20931355346992936" />
+        <entry key="presentation/src/main/res/layout/item_main_book.xml" value="0.146875" />
       </map>
     </option>
   </component>
