@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19057425021952726" />
+        <entry key="presentation/src/main/res/drawable/edittext_main.xml" value="0.16510416666666666" />
+        <entry key="presentation/src/main/res/drawable/frame_layout.xml" value="0.26851851851851855" />
+        <entry key="presentation/src/main/res/font/hanna11.xml" value="0.17708333333333334" />
+        <entry key="presentation/src/main/res/layout/activity_main.xml" value="0.2683452901976556" />
       </map>
     </option>
   </component>
