@@ -4,22 +4,23 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LifecycleOwner
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import kr.co.snack655.domain.entitiy.MainBook
 import kr.co.snack655.myportfolio.R
+import kr.co.snack655.myportfolio.adapter.callback.MainBookDiffCallBack
 import kr.co.snack655.myportfolio.databinding.ItemMainBookBinding
 import kr.co.snack655.myportfolio.util.Book
 
-class MainBookAdapter(lifecycleOwner: LifecycleOwner):
-RecyclerView.Adapter<MainBookAdapter.MainBookViewHolder>(){
-
-    var bookList: List<Book> = ArrayList<Book>()
+class MainBookAdapter(val lifecycleOwner: LifecycleOwner):
+ListAdapter<MainBook, MainBookAdapter.MainBookViewHolder>(MainBookDiffCallBack){
 
     class MainBookViewHolder(private val binding : ItemMainBookBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(book : Book) {
-            with(book) {
+        fun bind(data : MainBook) {
+            with(data) {
                 Glide.with(binding.root)
-                    .load(img)
+                    .load(data.bookBanner)
                     .centerCrop()
                     .error(R.drawable.book1)
                     .into(binding.ivBook)
@@ -42,8 +43,6 @@ RecyclerView.Adapter<MainBookAdapter.MainBookViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: MainBookViewHolder, position: Int) {
-        holder.bind(bookList[position])
+        holder.bind(getItem(position))
     }
-
-    override fun getItemCount(): Int = bookList.size
 }
