@@ -13,7 +13,7 @@ import kr.co.snack655.myportfolio.adapter.callback.MainBookDiffCallBack
 import kr.co.snack655.myportfolio.databinding.ItemMainBookBinding
 import kr.co.snack655.myportfolio.util.Book
 
-class MainBookAdapter(val lifecycleOwner: LifecycleOwner):
+class MainBookAdapter():
 ListAdapter<MainBook, MainBookAdapter.MainBookViewHolder>(MainBookDiffCallBack){
 
     class MainBookViewHolder(private val binding : ItemMainBookBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -32,14 +32,14 @@ ListAdapter<MainBook, MainBookAdapter.MainBookViewHolder>(MainBookDiffCallBack){
         parent: ViewGroup,
         viewType: Int
     ): MainBookViewHolder {
-        return MainBookViewHolder(
-            DataBindingUtil.inflate(
-                LayoutInflater.from(parent.context),
-                R.layout.item_main_book,
-                parent,
-                false
-            )
+        val binding = DataBindingUtil.inflate<ItemMainBookBinding>(
+            LayoutInflater.from(parent.context),
+            R.layout.item_main_book,
+            parent,
+            false
         )
+
+        return MainBookViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: MainBookViewHolder, position: Int) {
