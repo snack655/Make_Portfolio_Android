@@ -39,6 +39,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
+                android:id="@+id/btn_menu"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginLeft="20dp"
@@ -49,7 +50,7 @@
                 app:tint="@color/white" />
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/btn_detail_address"
                 android:layout_width="17dp"
                 android:layout_height="15dp"
                 android:layout_marginLeft="5dp"
@@ -60,6 +61,7 @@
                 app:tint="@color/white" />
 
             <ImageView
+                android:id="@+id/btn_alarm"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_marginRight="15dp"
@@ -72,7 +74,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="669dp"
+            android:layout_height="0dp"
             android:background="#F6F6F6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -90,6 +92,7 @@
                     android:background="@drawable/frame_layout" >
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_search"
                         android:layout_width="match_parent"
                         android:layout_height="47dp"
                         android:background="@drawable/edittext_main"
@@ -111,6 +114,7 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/btn_introduce"
                         android:layout_width="0dp"
                         android:layout_height="180dp"
                         android:layout_weight="1"
@@ -152,6 +156,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/btn_project"
                         android:layout_width="0dp"
                         android:layout_height="180dp"
                         android:layout_weight="1"
@@ -200,6 +205,7 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/btn_tech"
                         android:layout_width="0dp"
                         android:layout_height="80dp"
                         android:layout_marginLeft="15dp"
@@ -233,6 +239,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/btn_connect"
                         android:layout_width="0dp"
                         android:layout_height="80dp"
                         android:layout_marginRight="10dp"
@@ -265,6 +272,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/btn_operate"
                         android:layout_width="0dp"
                         android:layout_height="80dp"
                         app:cardElevation="3dp"
@@ -296,8 +304,12 @@
                 </LinearLayout>
 
                 <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/main_banner_viewpager"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
                     android:orientation="horizontal" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -318,6 +330,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:id="@+id/btn_book_detail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="전체 보기 >"
@@ -329,7 +342,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerView"
+                        android:id="@+id/main_book_recycler"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginTop="10dp"
