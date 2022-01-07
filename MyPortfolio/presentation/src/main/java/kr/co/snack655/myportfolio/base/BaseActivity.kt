@@ -3,6 +3,7 @@ package kr.co.snack655.myportfolio.base
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import kr.co.snack655.myportfolio.BR
@@ -24,9 +25,8 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompa
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         performDataBinding()
-
         mViewModel.onErrorEvent.observe(this, { exception ->
             onErrorEvent(exception)
         })
