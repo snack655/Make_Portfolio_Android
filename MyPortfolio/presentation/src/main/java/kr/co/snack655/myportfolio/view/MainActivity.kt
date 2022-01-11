@@ -1,7 +1,10 @@
 package kr.co.snack655.myportfolio.view
 
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.slidingpanelayout.widget.SlidingPaneLayout
+import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import kr.co.snack655.domain.entitiy.MainBanner
 import kr.co.snack655.domain.entitiy.MainBook
 import kr.co.snack655.myportfolio.R
@@ -18,6 +21,19 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
     override fun observerViewModel() {
         initMainBookRecycler()
         initMainBannerViewPager()
+
+        with(viewModel) {
+            onDetailAddressEvent.observe(this@MainActivity, {
+                var state = mBinding.slidingLayout.panelState
+
+                // 닫힌 상태
+                if (state == SlidingUpPanelLayout.PanelState.COLLAPSED) {
+                    mBinding.slidingLayout.panelState = SlidingUpPanelLayout.PanelState.ANCHORED
+                } else if (state == SlidingUpPanelLayout.PanelState.EXPANDED) {
+                    mBinding.slidingLayout.panelState = SlidingUpPanelLayout.PanelState.COLLAPSED
+                }
+            })
+        }
     }
 
     private fun initMainBookRecycler() {
