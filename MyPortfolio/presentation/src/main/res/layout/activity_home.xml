@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
@@ -69,7 +70,6 @@
                     app:layout_constraintStart_toEndOf="@+id/textView"
                     app:layout_constraintTop_toTopOf="parent" />
 
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.google.android.material.tabs.TabLayout
@@ -126,14 +126,32 @@
                 app:layout_constraintTop_toBottomOf="@id/home_tab" />
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:menu="@menu/home_bottom_app_bar" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <ImageView
+                        android:id="@+id/floatingActionButton"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_home_bar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
         <FrameLayout
             android:id="@+id/sliding"
             android:background="@drawable/panel_radius"
@@ -145,6 +163,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:name="kr.co.snack655.myportfolio.view.fragment.LocationFragment"/>
+
         </FrameLayout>
     </com.sothree.slidinguppanel.SlidingUpPanelLayout>
 </layout>

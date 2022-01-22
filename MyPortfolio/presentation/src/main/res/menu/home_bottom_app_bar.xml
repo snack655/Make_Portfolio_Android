@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_bottom_search"
+        android:title="검색"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/heart"
+        android:icon="@drawable/ic_bottom_heart"
+        android:title="찜"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/none"
+        android:title=""
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/record"
+        android:icon="@drawable/ic_bottom_record"
+        android:title="주문내역"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/my"
+        android:icon="@drawable/ic_bottom_smile"
+        android:title="My포민"
+        app:showAsAction="always"
+        />
+
+</menu>
