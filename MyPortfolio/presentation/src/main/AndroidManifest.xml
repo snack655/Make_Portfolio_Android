@@ -14,10 +14,10 @@
         android:theme="@style/Theme.MyPortfolio"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".view.HomeActivity"
+            android:name=".view.activity.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".view.StartActivity"
+            android:name=".view.activity.StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.MainActivity"
+            android:name=".view.activity.MainActivity"
             android:exported="true"></activity>
     </application>
 

@@ -1,4 +1,4 @@
-package kr.co.snack655.myportfolio.view
+package kr.co.snack655.myportfolio.view.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

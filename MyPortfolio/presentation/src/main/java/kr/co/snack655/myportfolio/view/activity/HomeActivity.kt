@@ -1,4 +1,4 @@
-package kr.co.snack655.myportfolio.view
+package kr.co.snack655.myportfolio.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

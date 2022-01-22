@@ -1,13 +1,10 @@
-package kr.co.snack655.myportfolio.view
+package kr.co.snack655.myportfolio.view.activity
 
 import android.util.Log
-import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.slidingpanelayout.widget.SlidingPaneLayout
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import kr.co.snack655.domain.entitiy.MainBanner
 import kr.co.snack655.domain.entitiy.MainBook
-import kr.co.snack655.myportfolio.R
 import kr.co.snack655.myportfolio.adapter.MainBannerAdapter
 import kr.co.snack655.myportfolio.adapter.MainBookAdapter
 import kr.co.snack655.myportfolio.base.BaseActivity
