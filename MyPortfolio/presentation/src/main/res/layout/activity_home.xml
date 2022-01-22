@@ -23,6 +23,7 @@
             android:layout_height="match_parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -44,8 +45,8 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:maxWidth="200dp"
                     android:ellipsize="end"
+                    android:maxWidth="200dp"
                     android:maxLines="1"
                     android:onClick="@{() -> vm.onClickDetailAddress()}"
                     android:text="대구 달성군 다사읍 대실역북로16 101동 2003호"
@@ -71,8 +72,57 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/home_tab"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:tabIndicator="@drawable/tab_indicator_home"
+                app:tabIndicatorColor="@color/main"
+                app:tabIndicatorGravity="center"
+                app:tabMode="scrollable"
+                app:tabIndicatorFullWidth="false"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="#949494"
+                app:tabRippleColor="@null"
+                app:tabTextAppearance="@style/tab_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" >
 
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   소개   " />
 
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   과제    " />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   기술   " />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   연락하기   " />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   운영   " />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#BFBFBF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_tab" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <FrameLayout

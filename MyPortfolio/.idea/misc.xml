@@ -10,6 +10,7 @@
         <entry key="presentation/src/main/res/drawable/ic_tech2.xml" value="0.16302083333333334" />
         <entry key="presentation/src/main/res/drawable/panel_radious.xml" value="0.12407407407407407" />
         <entry key="presentation/src/main/res/drawable/panel_radius.xml" value="0.21481481481481482" />
+        <entry key="presentation/src/main/res/drawable/tab_indicator_home.xml" value="0.16302083333333334" />
         <entry key="presentation/src/main/res/drawable/view_radius.xml" value="0.12407407407407407" />
         <entry key="presentation/src/main/res/font/hanna11.xml" value="0.17708333333333334" />
         <entry key="presentation/src/main/res/layout/activity_home.xml" value="0.165" />
