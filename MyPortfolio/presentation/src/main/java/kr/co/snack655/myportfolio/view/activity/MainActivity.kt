@@ -1,5 +1,6 @@
 package kr.co.snack655.myportfolio.view.activity
 
+import android.content.Intent
 import android.util.Log
 import androidx.activity.viewModels
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
@@ -29,6 +30,12 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
                 } else if (state == SlidingUpPanelLayout.PanelState.EXPANDED) {
                     mBinding.slidingLayout.panelState = SlidingUpPanelLayout.PanelState.COLLAPSED
                 }
+            })
+
+            onHomeEvent.observe(this@MainActivity, {
+                val intent = Intent(this@MainActivity, HomeActivity::class.java)
+                intent.putExtra("division", division.value)
+                startActivity(intent)
             })
         }
     }
