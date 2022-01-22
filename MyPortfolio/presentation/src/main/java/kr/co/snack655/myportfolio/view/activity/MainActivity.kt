@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import kr.co.snack655.domain.entitiy.MainBanner
 import kr.co.snack655.domain.entitiy.MainBook
+import kr.co.snack655.myportfolio.R
 import kr.co.snack655.myportfolio.adapter.MainBannerAdapter
 import kr.co.snack655.myportfolio.adapter.MainBookAdapter
 import kr.co.snack655.myportfolio.base.BaseActivity
@@ -36,6 +37,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
                 val intent = Intent(this@MainActivity, HomeActivity::class.java)
                 intent.putExtra("division", division.value)
                 startActivity(intent)
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_in_right)
             })
         }
     }

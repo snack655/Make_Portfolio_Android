@@ -2,6 +2,7 @@ package kr.co.snack655.myportfolio.view.activity
 
 import android.widget.Toast
 import androidx.activity.viewModels
+import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import kr.co.snack655.myportfolio.base.BaseActivity
 import kr.co.snack655.myportfolio.databinding.ActivityHomeBinding
 import kr.co.snack655.myportfolio.viewmodel.activity.HomeViewModel
@@ -16,6 +17,17 @@ class HomeActivity() : BaseActivity<ActivityHomeBinding, HomeViewModel>() {
         Toast.makeText(this, "$division", Toast.LENGTH_SHORT).show()
 
         with(viewModel) {
+            onDetailAddressEvent.observe(this@HomeActivity, {
+                var state = mBinding.slidingLayout.panelState
+
+                // 닫힌 상태
+                if (state == SlidingUpPanelLayout.PanelState.COLLAPSED) {
+                    mBinding.slidingLayout.panelState = SlidingUpPanelLayout.PanelState.ANCHORED
+                } else if (state == SlidingUpPanelLayout.PanelState.EXPANDED) {
+                    mBinding.slidingLayout.panelState = SlidingUpPanelLayout.PanelState.COLLAPSED
+                }
+            })
+
             onBackMainEvent.observe(this@HomeActivity, {
                 finish()
             })
