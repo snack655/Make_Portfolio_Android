@@ -116,6 +116,16 @@
 
             </com.google.android.material.tabs.TabLayout>
 
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/home_viewpager"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_tab" />
+
+
             <View
                 android:id="@+id/view"
                 android:layout_width="match_parent"
@@ -127,72 +137,73 @@
 
             <!-- 바텀 메뉴 -->
             <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:orientation="horizontal"
                 android:background="@drawable/bottom_navi_custom"
+                android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" >
+                app:layout_constraintStart_toStartOf="parent">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:orientation="vertical"
-                    android:layout_weight="1" >
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_gravity="center_horizontal"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
+                        android:layout_gravity="center_horizontal"
                         android:src="@drawable/ic_bottom_search" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:textSize="10dp"
                         android:layout_marginTop="3dp"
-                        android:textStyle="bold"
-                        android:text="검색" />
+                        android:text="검색"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:orientation="vertical"
-                    android:layout_weight="1" >
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_gravity="center_horizontal"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
+                        android:layout_gravity="center_horizontal"
                         android:src="@drawable/ic_bottom_heart" />
 
                     <TextView
-                        android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="10dp"
+                        android:layout_gravity="center_horizontal"
                         android:layout_marginTop="3dp"
-                        android:textStyle="bold"
-                        android:text="찜" />
+                        android:text="찜"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1" >
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_gravity="center_horizontal"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:visibility="invisible"
-                        android:src="@drawable/ic_bottom_search" />
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_bottom_search"
+                        android:visibility="invisible" />
 
 
                 </LinearLayout>
@@ -201,56 +212,57 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:orientation="vertical"
-                    android:layout_weight="1" >
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_gravity="center_horizontal"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
+                        android:layout_gravity="center_horizontal"
                         android:src="@drawable/ic_bottom_record" />
 
                     <TextView
-                        android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="10dp"
+                        android:layout_gravity="center_horizontal"
                         android:layout_marginTop="3dp"
+                        android:text="주문내역"
 
-                        android:textStyle="bold"
-                        android:text="주문내역" />
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:orientation="vertical"
-                    android:layout_weight="1" >
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_gravity="center_horizontal"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
+                        android:layout_gravity="center_horizontal"
                         android:src="@drawable/ic_bottom_smile" />
 
                     <TextView
-                        android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="10sp"
+                        android:layout_gravity="center_horizontal"
                         android:layout_marginTop="3dp"
-                        android:text="My포민" />
+                        android:text="My포민"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/imageView2"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                android:src="@drawable/ic_home_bar"
                 android:layout_marginBottom="-15dp"
                 android:onClick="@{() -> vm.onClickBackMain()}"
+                android:src="@drawable/ic_home_bar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />

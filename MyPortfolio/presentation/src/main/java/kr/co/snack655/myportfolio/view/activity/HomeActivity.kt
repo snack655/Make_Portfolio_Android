@@ -2,7 +2,11 @@ package kr.co.snack655.myportfolio.view.activity
 
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
+import kr.co.snack655.myportfolio.adapter.HomeViewpagerAdapter
 import kr.co.snack655.myportfolio.base.BaseActivity
 import kr.co.snack655.myportfolio.databinding.ActivityHomeBinding
 import kr.co.snack655.myportfolio.viewmodel.activity.HomeViewModel
@@ -17,6 +21,19 @@ class HomeActivity() : BaseActivity<ActivityHomeBinding, HomeViewModel>() {
         Toast.makeText(this, "$division", Toast.LENGTH_SHORT).show()
 
         with(viewModel) {
+            val homeViewPager: ViewPager2 = mBinding.homeViewpager
+            val homeTabLayout: TabLayout = mBinding.homeTab
+
+            val homeViewPagerAdapter = HomeViewpagerAdapter(this@HomeActivity)
+            homeViewPager.adapter = homeViewPagerAdapter
+
+            val homeTabTitles = listOf<String>("   소개   ", "   과제   ", "   기술   ", "   연락하기   ", "   운영   ")
+
+
+            TabLayoutMediator(homeTabLayout, homeViewPager) { tab, position ->
+                tab.text = homeTabTitles[position]
+            }.attach()
+
             onDetailAddressEvent.observe(this@HomeActivity, {
                 var state = mBinding.slidingLayout.panelState
 

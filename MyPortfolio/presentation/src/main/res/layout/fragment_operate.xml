@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="kr.co.snack655.myportfolio.viewmodel.fragment.ConnectViewModel" />
+            type="kr.co.snack655.myportfolio.viewmodel.fragment.OperateViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
