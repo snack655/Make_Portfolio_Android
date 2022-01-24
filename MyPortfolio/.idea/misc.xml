@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../../layout/custom_preview.xml" value="0.15" />
         <entry key="../../../../.gradle/caches/transforms-3/97825ddf45771e551c0fb4a99182efa8/transformed/jetified-library-3.4.0/res/drawable/below_shadow.xml" value="0.19444444444444445" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19057425021952726" />
         <entry key="presentation/src/main/res/drawable/bottom_navi_custom.xml" value="0.16302083333333334" />

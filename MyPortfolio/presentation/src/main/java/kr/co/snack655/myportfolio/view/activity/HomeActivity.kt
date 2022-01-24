@@ -2,6 +2,7 @@ package kr.co.snack655.myportfolio.view.activity
 
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -29,6 +30,7 @@ class HomeActivity() : BaseActivity<ActivityHomeBinding, HomeViewModel>() {
 
             val homeTabTitles = listOf<String>("   소개   ", "   과제   ", "   기술   ", "   연락하기   ", "   운영   ")
 
+            homeViewPager.currentItem = division - 1
 
             TabLayoutMediator(homeTabLayout, homeViewPager) { tab, position ->
                 tab.text = homeTabTitles[position]
