@@ -5,6 +5,7 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import kr.co.snack655.domain.entitiy.HomeIntro
 import kr.co.snack655.domain.entitiy.MainBanner
+import kr.co.snack655.myportfolio.R
 import kr.co.snack655.myportfolio.adapter.HomeIntroAdapter
 import kr.co.snack655.myportfolio.adapter.MainBannerAdapter
 import kr.co.snack655.myportfolio.base.BaseFragment
@@ -24,7 +25,7 @@ class IntroFragment(): BaseFragment<FragmentIntroBinding, IntroViewModel>() {
     private fun initHomeIntroViewPager() {
         val homeIntro = ArrayList<HomeIntro>()
         homeIntro.apply {
-            add(HomeIntro("이거 되냐.."))
+            add(HomeIntro(R.string.app_name.toString()))
             add(HomeIntro("제발"))
             add(HomeIntro("좀"))
             add(HomeIntro("좀"))

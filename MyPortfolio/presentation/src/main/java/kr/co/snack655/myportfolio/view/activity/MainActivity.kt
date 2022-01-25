@@ -2,6 +2,7 @@ package kr.co.snack655.myportfolio.view.activity
 
 import android.content.Intent
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.viewModels
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import kr.co.snack655.domain.entitiy.MainBanner
@@ -20,6 +21,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
     override fun observerViewModel() {
         initMainBookRecycler()
         initMainBannerViewPager()
+        initViewSize()
 
         with(viewModel) {
             onDetailAddressEvent.observe(this@MainActivity, {
@@ -80,5 +82,21 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
         mBinding.mainBannerViewpager.adapter = mainBannerAdapter
         mainBannerAdapter.submitList(mainBanner) // 아이템 업데이트
         Log.d("TESTTEST", "observerViewModel: $mainBanner")
+    }
+
+    private fun initViewSize() {
+        mBinding.btnIntroduce.viewTreeObserver.addOnGlobalLayoutListener {
+            val btnIntroWidth = mBinding.btnIntroduce.width
+            Toast.makeText(this, "$btnIntroWidth", Toast.LENGTH_SHORT).show()
+            mBinding.btnIntroduce.layoutParams.height = btnIntroWidth
+            mBinding.btnIntroduce.requestLayout()
+        }
+
+        mBinding.btnProject.viewTreeObserver.addOnGlobalLayoutListener {
+            val btnProjectWidth = mBinding.btnProject.width
+            Toast.makeText(this, "$btnProjectWidth", Toast.LENGTH_SHORT).show()
+            mBinding.btnProject.layoutParams.height = btnProjectWidth
+            mBinding.btnProject.requestLayout()
+        }
     }
 }
