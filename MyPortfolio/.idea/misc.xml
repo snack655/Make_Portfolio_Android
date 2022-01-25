@@ -22,7 +22,7 @@
         <entry key="presentation/src/main/res/layout/activity_main.xml" value="0.1746120871715069" />
         <entry key="presentation/src/main/res/layout/activity_start.xml" value="0.28769499392247944" />
         <entry key="presentation/src/main/res/layout/fragment_connect.xml" value="0.146875" />
-        <entry key="presentation/src/main/res/layout/fragment_intro.xml" value="0.146875" />
+        <entry key="presentation/src/main/res/layout/fragment_intro.xml" value="0.1" />
         <entry key="presentation/src/main/res/layout/fragment_location.xml" value="0.21202057455894135" />
         <entry key="presentation/src/main/res/layout/fragment_operate.xml" value="0.146875" />
         <entry key="presentation/src/main/res/layout/fragment_project.xml" value="0.146875" />
