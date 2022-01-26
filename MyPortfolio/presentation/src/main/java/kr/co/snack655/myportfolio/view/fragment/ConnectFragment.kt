@@ -13,6 +13,5 @@ class ConnectFragment(): BaseFragment<FragmentConnectBinding, ConnectViewModel>(
         with(viewModel) {
 
         }
-        Toast.makeText(context, "소환!", Toast.LENGTH_SHORT).show()
     }
 }

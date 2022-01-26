@@ -13,6 +13,5 @@ class ProjectFragment(): BaseFragment<FragmentProjectBinding, ProjectViewModel>(
         with(viewModel) {
 
         }
-        Toast.makeText(context, "소환!", Toast.LENGTH_SHORT).show()
     }
 }

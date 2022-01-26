@@ -2,7 +2,6 @@ package kr.co.snack655.myportfolio.view.activity
 
 import android.content.Intent
 import android.util.Log
-import android.widget.Toast
 import androidx.activity.viewModels
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import kr.co.snack655.domain.entitiy.MainBanner
@@ -84,19 +83,24 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
         Log.d("TESTTEST", "observerViewModel: $mainBanner")
     }
 
+    // 다양한 크기의 화면에서 뷰가 일정한 비율을 유지할 수 있도록 조작하는 함수
     private fun initViewSize() {
         mBinding.btnIntroduce.viewTreeObserver.addOnGlobalLayoutListener {
             val btnIntroWidth = mBinding.btnIntroduce.width
-            Toast.makeText(this, "$btnIntroWidth", Toast.LENGTH_SHORT).show()
             mBinding.btnIntroduce.layoutParams.height = btnIntroWidth
+            mBinding.btnProject.layoutParams.height = btnIntroWidth
             mBinding.btnIntroduce.requestLayout()
+            mBinding.btnProject.requestLayout()
         }
 
-        mBinding.btnProject.viewTreeObserver.addOnGlobalLayoutListener {
-            val btnProjectWidth = mBinding.btnProject.width
-            Toast.makeText(this, "$btnProjectWidth", Toast.LENGTH_SHORT).show()
-            mBinding.btnProject.layoutParams.height = btnProjectWidth
-            mBinding.btnProject.requestLayout()
+        mBinding.btnTech.viewTreeObserver.addOnGlobalLayoutListener {
+            val btnTechWidth = (mBinding.btnTech.width) / 2
+            mBinding.btnTech.layoutParams.height = btnTechWidth
+            mBinding.btnConnect.layoutParams.height = btnTechWidth
+            mBinding.btnOperate.layoutParams.height = btnTechWidth
+            mBinding.btnTech.requestLayout()
+            mBinding.btnConnect.requestLayout()
+            mBinding.btnOperate.requestLayout()
         }
     }
 }

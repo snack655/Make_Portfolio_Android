@@ -13,6 +13,5 @@ class TechFragment(): BaseFragment<FragmentTechBinding, TechViewModel>() {
         with(viewModel) {
 
         }
-        Toast.makeText(context, "소환!", Toast.LENGTH_SHORT).show()
     }
 }

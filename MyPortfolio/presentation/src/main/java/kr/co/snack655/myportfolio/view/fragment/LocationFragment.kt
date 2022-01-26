@@ -13,6 +13,5 @@ class LocationFragment(): BaseFragment<FragmentLocationBinding, LocationViewMode
         with(viewModel) {
 
         }
-        Toast.makeText(context, "소환!", Toast.LENGTH_SHORT).show()
     }
 }
