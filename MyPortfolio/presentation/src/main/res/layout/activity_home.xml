@@ -43,14 +43,14 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/tv_address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:maxWidth="200dp"
                     android:maxLines="1"
                     android:onClick="@{() -> vm.onClickDetailAddress()}"
-                    android:text="대구 달성군 다사읍 대실역북로16 101동 2003호"
+                    android:text="위치를 설정해주시오!"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -67,7 +67,7 @@
                     android:onClick="@{() -> vm.onClickDetailAddress()}"
                     android:src="@drawable/ic_btn_down"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView"
+                    app:layout_constraintStart_toEndOf="@+id/tv_address"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

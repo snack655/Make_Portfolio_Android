@@ -1,7 +1,9 @@
 package kr.co.snack655.myportfolio.view.activity
 
+import android.content.Context
 import android.content.Intent
 import android.util.Log
+import android.widget.TextView
 import androidx.activity.viewModels
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import kr.co.snack655.domain.entitiy.MainBanner
@@ -11,6 +13,7 @@ import kr.co.snack655.myportfolio.adapter.MainBannerAdapter
 import kr.co.snack655.myportfolio.adapter.MainBookAdapter
 import kr.co.snack655.myportfolio.base.BaseActivity
 import kr.co.snack655.myportfolio.databinding.ActivityMainBinding
+import kr.co.snack655.myportfolio.view.fragment.LocationFragment
 import kr.co.snack655.myportfolio.viewmodel.activity.MainViewModel
 
 class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
@@ -21,6 +24,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
         initMainBookRecycler()
         initMainBannerViewPager()
         initViewSize()
+        initLocation()
 
         with(viewModel) {
             onDetailAddressEvent.observe(this@MainActivity, {
@@ -94,13 +98,37 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
         }
 
         mBinding.btnTech.viewTreeObserver.addOnGlobalLayoutListener {
-            val btnTechWidth = (mBinding.btnTech.width) / 2
+            val btnTechWidth = (mBinding.btnTech.width) / 2 + 20
             mBinding.btnTech.layoutParams.height = btnTechWidth
             mBinding.btnConnect.layoutParams.height = btnTechWidth
             mBinding.btnOperate.layoutParams.height = btnTechWidth
             mBinding.btnTech.requestLayout()
             mBinding.btnConnect.requestLayout()
             mBinding.btnOperate.requestLayout()
+        }
+    }
+
+    private fun initLocation() {
+        val locationFragment = layoutInflater.inflate(R.layout.fragment_location, null)
+        val locationPref = getSharedPreferences("location_prefs", Context.MODE_PRIVATE)
+        when(locationPref.getInt("address", 0)) {
+            0 -> mBinding.tvAddress.text = "위치를 지정해주시오!"
+            1 -> {
+                val myLocation: TextView = locationFragment.findViewById(R.id.tv_home)
+                mBinding.tvAddress.text = myLocation.text
+            }
+            2 -> {
+                val myLocation: TextView = locationFragment.findViewById(R.id.tv_school)
+                mBinding.tvAddress.text = myLocation.text
+            }
+            3 -> {
+                val myLocation: TextView = locationFragment.findViewById(R.id.tv_address_home)
+                mBinding.tvAddress.text = myLocation.text
+            }
+            4 -> {
+                val myLocation: TextView = locationFragment.findViewById(R.id.tv_address_school)
+                mBinding.tvAddress.text = myLocation.text
+            }
         }
     }
 }

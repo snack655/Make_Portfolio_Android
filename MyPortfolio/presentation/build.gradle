@@ -75,6 +75,7 @@ dependencies {
     // Coroutine
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
 
+    // Sliding up panel
     implementation 'com.sothree.slidinguppanel:library:3.4.0'
 
     // dots Indicator

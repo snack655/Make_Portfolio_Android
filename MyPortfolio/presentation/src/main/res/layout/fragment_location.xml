@@ -62,7 +62,8 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> vm.onClickAddress(1)}">
 
                     <ImageView
                         android:id="@+id/iv_home"
@@ -84,7 +85,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toRightOf="@id/iv_home"
-                        app:layout_constraintRight_toRightOf="parent">
+                        app:layout_constraintRight_toLeftOf="@id/iv_home_check">
 
                         <TextView
                             android:id="@+id/tv_home"
@@ -104,6 +105,18 @@
                             android:textColor="#8E8E8E"
                             android:textSize="14sp" />
                     </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_home_check"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="invisible"
+                        android:layout_marginEnd="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <View
@@ -114,7 +127,8 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> vm.onClickAddress(2)}">
 
                     <ImageView
                         android:id="@+id/iv_school"
@@ -131,22 +145,24 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_marginLeft="20dp"
-                        app:layout_constraintTop_toTopOf="parent"
+                        android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintLeft_toRightOf="@id/iv_school"
-                        app:layout_constraintRight_toRightOf="parent">
+                        app:layout_constraintRight_toLeftOf="@id/iv_school_check"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.484">
 
                         <TextView
                             android:id="@+id/tv_school"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="학교"
                             android:layout_marginBottom="4dp"
+                            android:text="학교"
                             android:textColor="@color/black"
                             android:textSize="16sp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv_detail_school"
@@ -156,6 +172,18 @@
                             android:textColor="#8E8E8E"
                             android:textSize="14sp" />
                     </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_school_check"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="invisible"
+                        android:layout_marginEnd="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
 
@@ -173,7 +201,8 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> vm.onClickAddress(3)}">
 
                     <ImageView
                         android:id="@+id/iv_mapping_home"
@@ -195,7 +224,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toRightOf="@id/iv_mapping_home"
-                        app:layout_constraintRight_toRightOf="parent">
+                        app:layout_constraintRight_toLeftOf="@id/iv_detail_home_check">
 
                         <TextView
                             android:id="@+id/tv_address_home"
@@ -215,6 +244,18 @@
                             android:textColor="#8E8E8E"
                             android:textSize="14sp" />
                     </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_detail_home_check"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="invisible"
+                        android:layout_marginEnd="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <View
@@ -225,7 +266,8 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> vm.onClickAddress(4)}">
 
                     <ImageView
                         android:id="@+id/iv_mapping_school"
@@ -247,7 +289,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toRightOf="@id/iv_mapping_school"
-                        app:layout_constraintRight_toRightOf="parent">
+                        app:layout_constraintRight_toLeftOf="@id/iv_detail_school_check">
 
                         <TextView
                             android:id="@+id/tv_address_school"
@@ -267,10 +309,20 @@
                             android:textColor="#8E8E8E"
                             android:textSize="14sp" />
                     </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_detail_school_check"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_check"
+                        android:visibility="invisible"
+                        android:layout_marginEnd="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
         </LinearLayout>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
