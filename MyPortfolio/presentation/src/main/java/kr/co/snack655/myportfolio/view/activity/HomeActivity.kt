@@ -41,7 +41,7 @@ class HomeActivity() : BaseActivity<ActivityHomeBinding, HomeViewModel>() {
                 tab.text = homeTabTitles[position]
             }.attach()
 
-            onDetailAddressEvent.observe(this@HomeActivity, {
+            onDetailAddressEvent.observe(this@HomeActivity) {
                 var state = mBinding.slidingLayout.panelState
 
                 // 닫힌 상태
@@ -50,11 +50,11 @@ class HomeActivity() : BaseActivity<ActivityHomeBinding, HomeViewModel>() {
                 } else if (state == SlidingUpPanelLayout.PanelState.EXPANDED) {
                     mBinding.slidingLayout.panelState = SlidingUpPanelLayout.PanelState.COLLAPSED
                 }
-            })
+            }
 
-            onBackMainEvent.observe(this@HomeActivity, {
+            onBackMainEvent.observe(this@HomeActivity) {
                 finish()
-            })
+            }
         }
     }
 
